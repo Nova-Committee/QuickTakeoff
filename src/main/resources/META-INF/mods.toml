@@ -1,5 +1,5 @@
 modLoader = "lowcodefml"
-loaderVersion = "[46,)"
+loaderVersion = "[38,)"
 license = "GNU AGPL 3.0"
 [[mods]]
 modId = "quicktakeoff"
