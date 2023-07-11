@@ -1,7 +1,5 @@
-package committee.nova.quicktakeoff.mixin;
+package committee.nova.quicktakeoff.mixin.server;
 
-import net.minecraft.client.player.LocalPlayer;
-import net.minecraft.network.protocol.game.ServerboundPlayerCommandPacket;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.FireworkRocketItem;
 import org.spongepowered.asm.mixin.Mixin;
@@ -12,9 +10,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 public abstract class MixinFireworkRocketItem {
     @Redirect(method = "use", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/player/Player;isFallFlying()Z"))
     private boolean redirect$use(Player player) {
-        if (!(player instanceof LocalPlayer l)) return player.isFallFlying();
-        if (!player.isFallFlying() && player.tryToStartFallFlying())
-            l.connection.send(new ServerboundPlayerCommandPacket(l, ServerboundPlayerCommandPacket.Action.START_FALL_FLYING));
+        if (!player.isFallFlying()) player.tryToStartFallFlying();
         return player.isFallFlying();
     }
 }

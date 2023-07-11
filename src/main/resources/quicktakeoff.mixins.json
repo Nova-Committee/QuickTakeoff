@@ -5,7 +5,10 @@
   "compatibilityLevel": "JAVA_8",
   "refmap": "quicktakeoff.refmap.json",
   "client": [
-    "MixinFireworkRocketItem"
+    "client.MixinFireworkRocketItem"
+  ],
+  "server": [
+    "server.MixinFireworkRocketItem"
   ],
   "injectors": {
     "defaultRequire": 1
