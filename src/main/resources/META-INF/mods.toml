@@ -1,0 +1,10 @@
+modLoader = "lowcodefml"
+loaderVersion = "[46,)"
+license = "GNU AGPL 3.0"
+[[mods]]
+modId = "quicktakeoff"
+version = "${file.jarVersion}"
+displayName = "QuickTakeoff"
+authors = "Tapio"
+displayTest = "IGNORE_ALL_VERSION"
+description = ""
