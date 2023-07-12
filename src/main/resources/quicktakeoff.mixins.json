@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "committee.nova.quicktakeoff.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "client": [
+    "client.MixinFireworkRocketItem"
+  ],
+  "server": [
+    "server.MixinFireworkRocketItem"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "quicktakeoff",
+  "version": "${version}",
+  "name": "QuickTakeoff",
+  "description": "",
+  "authors": [
+    "Tapio"
+  ],
+  "license": "AGPL-3.0",
+  "environment": "*",
+  "mixins": [
+    "quicktakeoff.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": "*",
+    "minecraft": "*"
+  }
+}
